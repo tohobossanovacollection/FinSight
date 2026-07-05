@@ -93,21 +93,10 @@ export function Hero() {
         }}
       />
 
-      <div className="relative z-10 max-w-7xl mx-auto px-6 pt-28 pb-20 grid lg:grid-cols-2 gap-16 items-center">
-        {/* Left: Text Content */}
-        <div>
-          {/* Badge */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5 }}
-            className="inline-flex items-center gap-2 px-4 py-2 rounded-full glass border border-blue-500/20 mb-8"
-          >
-            <div className="w-2 h-2 rounded-full bg-blue-400 animate-pulse" />
-            <span className="text-sm font-medium text-blue-300">
-              AI-Powered Financial Intelligence
-            </span>
-          </motion.div>
+      <div className="relative z-10 max-w-7xl mx-auto px-6 pt-32 pb-20 flex flex-col items-center justify-center text-center gap-20">
+        {/* Top: Text Content */}
+        <div className="flex flex-col items-center max-w-3xl mx-auto">
+
 
           {/* Headline */}
           <motion.h1
@@ -137,7 +126,7 @@ export function Hero() {
 
           {/* CTA Buttons */}
           <motion.div
-            className="flex flex-wrap gap-4"
+            className="flex flex-wrap justify-center gap-4"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.3 }}
@@ -161,7 +150,7 @@ export function Hero() {
 
           {/* Social proof micro-stats */}
           <motion.div
-            className="flex items-center gap-8 mt-12"
+            className="flex items-center justify-center gap-8 mt-12"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.6, duration: 0.5 }}
@@ -179,8 +168,8 @@ export function Hero() {
           </motion.div>
         </div>
 
-        {/* Right: Dashboard Mockup */}
-        <div className="relative hidden lg:flex items-center justify-center min-h-[520px]">
+        {/* Bottom: Dashboard Mockup */}
+        <div className="relative flex items-center justify-center w-full max-w-3xl min-h-[520px]">
           {/* Main Dashboard Card */}
           <motion.div
             className="relative w-full max-w-md glass-card rounded-3xl p-6 shadow-[0_32px_80px_rgba(0,0,0,0.5)] border border-white/[0.08]"
@@ -258,7 +247,7 @@ export function Hero() {
 
           {/* Floating Card 1 — Savings Goal */}
           <FloatingCard
-            className="-left-16 top-8 w-52"
+            className="-left-24 lg:-left-32 top-8 w-52"
             delay={0.9}
           >
             <div className="flex items-center gap-2.5 mb-3">
@@ -281,7 +270,7 @@ export function Hero() {
 
           {/* Floating Card 2 — Score Trend */}
           <FloatingCard
-            className="-right-12 bottom-16 w-44"
+            className="-right-20 lg:-right-28 bottom-16 w-44"
             delay={1.1}
           >
             <div className="flex items-center gap-2 mb-2">

@@ -362,6 +362,11 @@ body {
   color: rgba(148, 163, 184, 0.6);
 }
 
+select.input-field option {
+  background-color: #0f172a;
+  color: #f1f5f9;
+}
+
 /* Label */
 .input-label {
   display: block;
