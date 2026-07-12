@@ -1,7 +1,7 @@
 "use client";
 import { useState } from "react";
 import { motion, AnimatePresence } from "motion/react";
-import { ChevronDown, Plus } from "lucide-react";
+import { Plus } from "lucide-react";
 import { AnimatedSection } from "./ui/AnimatedSection";
 
 const faqs = [
@@ -41,7 +41,7 @@ function FAQItem({ faq, index }: { faq: { q: string; a: string }; index: number 
       viewport={{ once: true, margin: "-40px" }}
       transition={{ delay: index * 0.07, duration: 0.5 }}
       className={`border rounded-2xl overflow-hidden transition-all duration-300 ${
-        open ? "border-blue-500/30 bg-blue-950/20" : "border-white/[0.06] glass-card"
+        open ? "border-[#1C5DFD]/30 bg-[#1C5DFD]/[0.02]" : "border-slate-100 bg-white hover:border-[#1C5DFD]/20"
       }`}
     >
       <button
@@ -49,14 +49,14 @@ function FAQItem({ faq, index }: { faq: { q: string; a: string }; index: number 
         className="w-full flex items-center justify-between p-6 text-left group"
         aria-expanded={open}
       >
-        <span className="text-base font-semibold text-white pr-4 group-hover:text-blue-300 transition-colors">
+        <span className={`text-base font-semibold pr-4 transition-colors ${open ? "text-[#1C5DFD]" : "text-[#1A1A2E] group-hover:text-[#1C5DFD]"}`}>
           {faq.q}
         </span>
         <motion.div
           animate={{ rotate: open ? 45 : 0 }}
           transition={{ duration: 0.25 }}
           className={`shrink-0 w-7 h-7 rounded-full flex items-center justify-center transition-colors ${
-            open ? "bg-blue-500/20 text-blue-400" : "bg-white/[0.06] text-slate-500"
+            open ? "bg-[#1C5DFD]/10 text-[#1C5DFD]" : "bg-slate-100 text-[#5C6B7A]"
           }`}
         >
           <Plus className="w-4 h-4" />
@@ -72,7 +72,7 @@ function FAQItem({ faq, index }: { faq: { q: string; a: string }; index: number 
             transition={{ duration: 0.3, ease: "easeOut" }}
             className="overflow-hidden"
           >
-            <div className="px-6 pb-6 text-slate-400 leading-relaxed text-sm border-t border-white/[0.06] pt-4">
+            <div className="px-6 pb-6 text-[#5C6B7A] leading-relaxed text-sm border-t border-slate-100 pt-4">
               {faq.a}
             </div>
           </motion.div>
@@ -84,19 +84,17 @@ function FAQItem({ faq, index }: { faq: { q: string; a: string }; index: number 
 
 export function FAQ() {
   return (
-    <section id="faq" className="section-padding relative overflow-hidden bg-gradient-section">
+    <section id="faq" className="section-padding relative overflow-hidden bg-white">
       <div className="max-w-4xl mx-auto">
         <AnimatedSection className="text-center mb-16">
-          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full glass border border-white/10 mb-6">
-            <span className="text-sm font-medium text-slate-400">FAQ</span>
-          </div>
-          <h2 className="text-4xl md:text-5xl font-bold text-white tracking-tight mb-5">
+          <div className="badge-brand mb-6 mx-auto w-fit">FAQ</div>
+          <h2 className="text-4xl md:text-5xl font-bold text-[#1A1A2E] tracking-tight mb-5">
             Frequently asked{" "}
             <span className="gradient-text">questions</span>
           </h2>
-          <p className="text-lg text-slate-400">
+          <p className="text-lg text-[#5C6B7A]">
             Have a question? We've got answers. Or reach us at{" "}
-            <a href="mailto:hello@finsight.ai" className="text-blue-400 hover:text-blue-300 transition-colors">
+            <a href="mailto:hello@finsight.ai" className="text-[#1C5DFD] hover:underline">
               hello@finsight.ai
             </a>
           </p>

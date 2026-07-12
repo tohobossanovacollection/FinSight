@@ -3,43 +3,20 @@ import { motion } from "motion/react";
 import { Lock, Package, UserCheck, FlaskConical } from "lucide-react";
 
 const badges = [
-  {
-    icon: Lock,
-    label: "Bank-grade data encryption",
-    color: "text-blue-400",
-    bg: "bg-blue-500/10 border-blue-500/20",
-  },
-  {
-    icon: Package,
-    label: "No hidden loans or products sold",
-    color: "text-emerald-400",
-    bg: "bg-emerald-500/10 border-emerald-500/20",
-  },
-  {
-    icon: UserCheck,
-    label: "Your data, your control",
-    color: "text-violet-400",
-    bg: "bg-violet-500/10 border-violet-500/20",
-  },
-  {
-    icon: FlaskConical,
-    label: "Built on real financial behavior science",
-    color: "text-amber-400",
-    bg: "bg-amber-500/10 border-amber-500/20",
-  },
+  { icon: Lock, label: "Bank-grade data encryption", color: "text-[#1C5DFD]", bg: "bg-[#1C5DFD]/[0.07] border-[#1C5DFD]/20" },
+  { icon: Package, label: "No hidden loans or products sold", color: "text-emerald-600", bg: "bg-emerald-50 border-emerald-200" },
+  { icon: UserCheck, label: "Your data, your control", color: "text-violet-600", bg: "bg-violet-50 border-violet-200" },
+  { icon: FlaskConical, label: "Built on real financial behavior science", color: "text-amber-600", bg: "bg-amber-50 border-amber-200" },
 ];
 
 export function TrustStrip() {
   return (
-    <section className="relative py-10 border-y border-white/[0.05] overflow-hidden">
-      {/* Background */}
-      <div className="absolute inset-0 bg-gradient-to-r from-transparent via-blue-950/20 to-transparent" />
+    <section className="relative py-10 border-y border-slate-100 overflow-hidden bg-white">
       <div className="divider-glow absolute top-0 left-0 right-0" />
       <div className="divider-glow absolute bottom-0 left-0 right-0" />
 
       <div className="relative max-w-7xl mx-auto px-6">
         <div className="flex flex-col md:flex-row items-center justify-between gap-8">
-          {/* Main message */}
           <motion.div
             initial={{ opacity: 0, x: -20 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -47,14 +24,13 @@ export function TrustStrip() {
             transition={{ duration: 0.6 }}
             className="shrink-0"
           >
-            <p className="text-lg md:text-xl font-semibold text-white text-center md:text-left">
+            <p className="text-lg md:text-xl font-semibold text-[#1A1A2E] text-center md:text-left">
               Not a Bank.{" "}
-              <span className="text-slate-400">Not a Lender.</span>{" "}
+              <span className="text-[#5C6B7A]">Not a Lender.</span>{" "}
               <span className="gradient-text">Just Your AI Financial Ally.</span>
             </p>
           </motion.div>
 
-          {/* Badges */}
           <div className="flex flex-wrap justify-center md:justify-end gap-3">
             {badges.map((badge, i) => (
               <motion.div
@@ -63,7 +39,7 @@ export function TrustStrip() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: 0.1 + i * 0.08, duration: 0.4 }}
-                className={`flex items-center gap-2 px-3.5 py-2 rounded-full border text-xs font-medium ${badge.bg} ${badge.color}`}
+                className={`flex items-center gap-2 px-3.5 py-2 rounded-full border text-xs font-semibold ${badge.bg} ${badge.color}`}
               >
                 <badge.icon className="w-3.5 h-3.5 shrink-0" />
                 {badge.label}

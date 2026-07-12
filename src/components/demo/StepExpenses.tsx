@@ -23,8 +23,8 @@ export function StepExpenses({ formData, updateFormData }: StepProps) {
   return (
     <div className="p-8 md:p-10 max-h-[60vh] overflow-y-auto custom-scrollbar">
       <div className="mb-8">
-        <h2 className="text-2xl font-bold text-white mb-2">Monthly Expenses</h2>
-        <p className="text-slate-400 text-sm">
+        <h2 className="text-2xl font-bold text-[#1A1A2E] mb-2">Monthly Expenses</h2>
+        <p className="text-[#5C6B7A] text-sm">
           Estimate your average monthly spending in these categories. Leave blank if not applicable.
         </p>
       </div>
@@ -34,7 +34,7 @@ export function StepExpenses({ formData, updateFormData }: StepProps) {
           <div key={field.id}>
             <label className="input-label" htmlFor={field.id}>{field.label}</label>
             <div className="relative">
-              <span className="absolute left-4 top-1/2 -translate-y-1/2 text-slate-400 font-medium">$</span>
+              <span className="absolute left-4 top-1/2 -translate-y-1/2 text-[#5C6B7A] font-medium">$</span>
               <input
                 id={field.id}
                 type="number"

@@ -11,15 +11,12 @@ import { StepGoals } from "@/components/demo/StepGoals";
 import { DemoResults } from "@/components/demo/DemoResults";
 
 export interface FormData {
-  // Personal
   age: string;
   city: string;
   country: string;
-  // Income
   salaryIncome: string;
   freelanceIncome: string;
   otherIncome: string;
-  // Expenses
   rent: string;
   utilities: string;
   subscriptions: string;
@@ -30,48 +27,23 @@ export interface FormData {
   healthcare: string;
   education: string;
   otherExpenses: string;
-  // Debts
   loans: { type: string; balance: string; monthlyPayment: string }[];
   creditCards: { name: string; balance: string; limit: string }[];
-  // Goals
   goalType: string;
   goalAmount: string;
   goalMonths: string;
 }
 
 const initialFormData: FormData = {
-  age: "",
-  city: "",
-  country: "",
-  salaryIncome: "",
-  freelanceIncome: "",
-  otherIncome: "",
-  rent: "",
-  utilities: "",
-  subscriptions: "",
-  groceries: "",
-  transportation: "",
-  shopping: "",
-  entertainment: "",
-  healthcare: "",
-  education: "",
-  otherExpenses: "",
-  loans: [],
-  creditCards: [],
-  goalType: "",
-  goalAmount: "",
-  goalMonths: "",
+  age: "", city: "", country: "",
+  salaryIncome: "", freelanceIncome: "", otherIncome: "",
+  rent: "", utilities: "", subscriptions: "", groceries: "", transportation: "",
+  shopping: "", entertainment: "", healthcare: "", education: "", otherExpenses: "",
+  loans: [], creditCards: [],
+  goalType: "", goalAmount: "", goalMonths: "",
 };
 
-const stepLabels = [
-  "Profile",
-  "Income",
-  "Expenses",
-  "Debts",
-  "Goals",
-  "Results",
-];
-
+const stepLabels = ["Profile", "Income", "Expenses", "Debts", "Goals"];
 const stepComponents = [StepPersonal, StepIncome, StepExpenses, StepDebts, StepGoals];
 
 export default function DemoPage() {
@@ -80,50 +52,38 @@ export default function DemoPage() {
   const [direction, setDirection] = useState(1);
   const [showResults, setShowResults] = useState(false);
 
-  const totalSteps = 5; // form steps (0-4), results is 5
+  const totalSteps = 5;
 
   const updateFormData = (updates: Partial<FormData>) => {
     setFormData((prev) => ({ ...prev, ...updates }));
   };
 
   const goNext = () => {
-    if (step < totalSteps - 1) {
-      setDirection(1);
-      setStep((s) => s + 1);
-    } else {
-      // Submit → show results
-      setDirection(1);
-      setShowResults(true);
-    }
+    if (step < totalSteps - 1) { setDirection(1); setStep((s) => s + 1); }
+    else { setDirection(1); setShowResults(true); }
   };
 
   const goPrev = () => {
-    if (step > 0) {
-      setDirection(-1);
-      setStep((s) => s - 1);
-    }
+    if (step > 0) { setDirection(-1); setStep((s) => s - 1); }
   };
 
   const CurrentStep = stepComponents[step];
   const progress = ((step + 1) / (totalSteps + 1)) * 100;
 
-  if (showResults) {
-    return <DemoResults formData={formData} />;
-  }
+  if (showResults) return <DemoResults formData={formData} />;
 
   return (
     <div className="min-h-screen bg-gradient-hero relative overflow-hidden">
-      {/* Background orbs */}
-      <div className="orb orb-blue w-[500px] h-[500px] -top-32 -left-32 opacity-40" />
-      <div className="orb orb-purple w-[400px] h-[400px] top-1/2 right-0 opacity-30" />
+      {/* Background decorations */}
+      <div className="orb orb-blue w-[400px] h-[400px] -top-32 -left-32 opacity-30" />
+      <div className="orb orb-tint w-[350px] h-[350px] top-1/2 right-0 opacity-40" />
 
-      {/* Grid */}
+      {/* Dot grid */}
       <div
-        className="absolute inset-0 opacity-[0.025]"
+        className="absolute inset-0 opacity-[0.15]"
         style={{
-          backgroundImage: `linear-gradient(rgba(255,255,255,0.5) 1px, transparent 1px),
-                           linear-gradient(90deg, rgba(255,255,255,0.5) 1px, transparent 1px)`,
-          backgroundSize: "60px 60px",
+          backgroundImage: "radial-gradient(circle, #6590BA 1.5px, transparent 1.5px)",
+          backgroundSize: "20px 20px",
         }}
       />
 
@@ -131,62 +91,48 @@ export default function DemoPage() {
         {/* Header */}
         <div className="flex items-center justify-between mb-10">
           <Link href="/" className="flex items-center gap-2 group">
-            <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-blue-500 to-blue-700 flex items-center justify-center shadow-lg">
+            <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-[#1C5DFD] to-[#5EA7FD] flex items-center justify-center shadow-[0_4px_12px_rgba(28,93,253,0.3)]">
               <Activity className="w-4 h-4 text-white" strokeWidth={2.5} />
             </div>
-            <span className="text-white font-bold text-lg tracking-tight">
-              Fin<span className="text-blue-400">Sight</span>
+            <span className="text-[#1A1A2E] font-bold text-lg tracking-tight">
+              Fin<span className="text-[#1C5DFD]">Sight</span>
             </span>
           </Link>
-          <div className="text-sm text-slate-500">
+          <div className="text-sm font-medium text-[#5C6B7A]">
             Step {step + 1} of {totalSteps}
           </div>
         </div>
 
-        {/* Progress bar */}
+        {/* Progress */}
         <div className="mb-10">
-          {/* Step labels */}
           <div className="flex gap-0 mb-4">
-            {stepLabels.slice(0, totalSteps).map((label, i) => (
+            {stepLabels.map((label, i) => (
               <div key={label} className="flex-1 text-center">
-                <div
-                  className={`text-[10px] font-semibold uppercase tracking-widest transition-colors ${
-                    i < step
-                      ? "text-blue-400"
-                      : i === step
-                      ? "text-white"
-                      : "text-slate-700"
-                  }`}
-                >
-                  {label}
-                </div>
+                <div className={`text-[10px] font-bold uppercase tracking-widest transition-colors ${
+                  i < step ? "text-[#1C5DFD]" : i === step ? "text-[#1A1A2E]" : "text-[#9EAABF]"
+                }`}>{label}</div>
               </div>
             ))}
           </div>
-          {/* Bar */}
-          <div className="h-1.5 rounded-full bg-white/[0.06] overflow-hidden">
+          <div className="h-1.5 rounded-full bg-slate-200 overflow-hidden">
             <motion.div
-              className="h-full rounded-full bg-gradient-to-r from-blue-500 to-violet-500"
+              className="h-full rounded-full bg-gradient-to-r from-[#1C5DFD] to-[#519FFA]"
               animate={{ width: `${progress}%` }}
               transition={{ duration: 0.4, ease: "easeOut" }}
             />
           </div>
-          {/* Step dots */}
           <div className="flex justify-between mt-2 -mx-1">
             {Array.from({ length: totalSteps }).map((_, i) => (
-              <div
-                key={i}
-                className={`w-2 h-2 rounded-full transition-all duration-300 ${
-                  i < step ? "bg-blue-500" : i === step ? "bg-white scale-125" : "bg-white/20"
-                }`}
-              />
+              <div key={i} className={`w-2 h-2 rounded-full transition-all duration-300 ${
+                i < step ? "bg-[#1C5DFD]" : i === step ? "bg-[#1C5DFD] scale-125" : "bg-slate-200"
+              }`} />
             ))}
           </div>
         </div>
 
         {/* Form Card */}
         <div className="flex-1">
-          <div className="glass-card rounded-3xl border border-white/[0.07] overflow-hidden shadow-[0_24px_80px_rgba(0,0,0,0.5)]">
+          <div className="bg-white rounded-3xl border border-slate-100 overflow-hidden shadow-[0_24px_80px_rgba(28,93,253,0.1)]">
             <AnimatePresence mode="wait" custom={direction}>
               <motion.div
                 key={step}
@@ -202,15 +148,13 @@ export default function DemoPage() {
           </div>
         </div>
 
-        {/* Navigation Buttons */}
+        {/* Navigation */}
         <div className="flex items-center justify-between mt-8">
           <button
             onClick={goPrev}
             disabled={step === 0}
-            className={`flex items-center gap-2 px-5 py-3 rounded-xl text-sm font-semibold transition-all ${
-              step === 0
-                ? "text-slate-700 cursor-not-allowed"
-                : "text-slate-300 hover:text-white btn-secondary"
+            className={`flex items-center gap-2 px-5 py-3 rounded-full text-sm font-semibold transition-all ${
+              step === 0 ? "text-[#9EAABF] cursor-not-allowed" : "text-[#5C6B7A] hover:text-[#1C5DFD] hover:bg-[#1C5DFD]/[0.06] border border-slate-200"
             }`}
           >
             <ChevronLeft className="w-4 h-4" />
@@ -228,8 +172,7 @@ export default function DemoPage() {
           </motion.button>
         </div>
 
-        {/* Privacy note */}
-        <p className="text-center text-xs text-slate-700 mt-6">
+        <p className="text-center text-xs text-[#9EAABF] mt-6">
           🔒 Your data stays on your device. Nothing is stored or shared.
         </p>
       </div>

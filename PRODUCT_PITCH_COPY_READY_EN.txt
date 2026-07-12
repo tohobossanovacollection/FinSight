@@ -1,0 +1,195 @@
+FINSIGHT - COPY-READY PRODUCT DESCRIPTION
+
+
+4. CORE CAPABILITIES
+
+Core capabilities:
+
+- Financial Health Score: a single overall score that reflects a user's financial health.
+- Cash Flow Analysis: analyzes income, expenses, debt, and the amount of money left each month.
+- Predictive Cash-Flow Forecast: provides a forward-looking cash-flow forecast over 6-12 months.
+- Risk Alerts: gives early warnings about risks such as cash-flow shortfalls, rising debt ratios, or insufficient emergency savings.
+- Personalized Action Plan: recommends specific next steps instead of generic financial advice.
+- Goal Planning: helps users plan around personal financial goals.
+- Privacy-first Input: allows manual input and future support for uploading PDF financial statements without requiring users to connect their bank accounts.
+
+
+5. CURRENT PRODUCT STATUS
+
+- The product includes a 5-step data input flow: profile, income, expenses, debts, and goals.
+- The demo result screen includes a Financial Health Score, monthly cash flow, and top recommendations.
+
+
+8. OUTPUTS AND USER VALUE
+
+FinSight does not simply display charts. The product is designed to turn financial data into better decisions.
+
+
+Financial Health Score
+
+The score gives users a simple signal to understand where they currently stand. In the current demo, the score is mainly based on savings rate and cash flow. In the full product, the score should expand into a multi-factor model that includes:
+
+- Income stability.
+- Spending discipline.
+- Debt burden.
+- Savings rate.
+- Emergency buffer.
+- Goal progress.
+- Cash-flow volatility.
+
+
+Cash Flow View
+
+Users can clearly see:
+
+- Total income.
+- Total expenses and debt obligations.
+- Money left over or cash-flow shortfall.
+
+
+Risk Alerts
+
+If cash flow turns negative or financial risk increases, FinSight warns users early so they do not discover the problem only after it is too late.
+
+Examples:
+
+- "You are spending more than you earn."
+- "Entertainment and shopping expenses are high compared with your income level."
+- "Monthly debt payments are affecting your ability to save."
+
+
+Action Plan
+
+FinSight should provide concrete, measurable, and immediately actionable recommendations.
+
+Examples:
+
+- Reduce discretionary spending this month.
+- Automatically transfer part of positive cash flow into a savings account.
+- Prioritize paying down high-interest debt.
+- Build a 3-month emergency fund before expanding into other goals.
+
+This is the key difference between FinSight and apps that only track past spending.
+
+
+11. BUSINESS MODEL
+
+FinSight can follow a freemium SaaS model for individual users.
+
+
+Free
+
+Goal: reduce the barrier to entry and create a user acquisition funnel.
+
+Suitable features:
+
+- Basic Financial Health Score.
+- Short-term cash-flow view.
+- Manual data entry.
+- Limited personalized recommendations.
+- One financial goal.
+
+
+Plus
+
+Goal: convert users who have stronger financial planning needs.
+
+Suitable features:
+
+- 6-month forecast.
+- Risk alerts.
+- PDF/CSV upload.
+- Unlimited recommendations.
+- Goal roadmap (how much the user needs to set aside each month to reach a financial goal).
+- Monthly report.
+
+
+Premium
+
+Goal: serve power users or users with more complex financial situations.
+
+Suitable features:
+
+- 12-month forecast.
+- Scenario planning.
+- Multi-income modeling (analysis across multiple income sources).
+- Debt payoff optimizer.
+- Weekly AI coaching.
+- Priority support.
+
+
+Why this model makes sense
+
+- Users can see value before paying.
+- Paid features are tied to higher-value outcomes: forecasting, alerts, automation, and coaching.
+- The model does not depend on selling user data or pushing financial products, which helps build trust.
+
+
+12. COMPETITIVE ADVANTAGE
+
+FinSight does not compete by becoming a cheaper expense-tracking app. Its advantage is the shift from tracking to intelligence.
+
+Key differentiators:
+
+- Focuses on the future, not only the past.
+- Does not require bank login.
+- Combines score, forecast, risk alerts, and action plan in one experience.
+- Works well for users with variable income, such as freelancers.
+- Explains the problem and the next action, instead of only showing charts.
+- Positions itself as privacy-first and avoids business models based on selling data or cross-selling financial products.
+
+
+13. DEVELOPMENT ROADMAP
+
+Instead of only serving end users through its own website or application, FinSight will develop a public API that allows businesses to integrate personal financial intelligence directly into their own products.
+
+
+Target B2B customers
+
+- Digital banks and e-wallets.
+- Insurance companies.
+- Payroll platforms.
+- HR benefits companies.
+- Universities or education organizations.
+- Large companies that want to provide financial wellness benefits to employees.
+- Fintech companies that want a scoring engine and recommendation engine without building them from scratch.
+
+
+What the Public API will provide
+
+- Financial Health Score.
+- Cash-flow risk signal.
+- Debt insight.
+- Savings recommendation.
+- Spending pattern.
+- Goal progress.
+- Personalized action plan.
+
+With the public API, partners can send financial data that users have consented to share, then receive analysis results that can be displayed directly inside their dashboard, mobile app, or internal system.
+
+
+Enterprise support infrastructure
+
+- Developer portal.
+- Sandbox environment.
+- API documentation.
+- API key management.
+- OAuth/SSO.
+- Webhooks for risk alerts.
+- SDKs for popular frameworks.
+- Rate limiting.
+- Audit log.
+- Tenant-based access control.
+- Admin dashboard.
+- Usage reporting.
+- SLA packages based on security, performance, and data compliance requirements.
+
+
+B2B revenue model
+
+- Monthly platform fee.
+- Pricing based on active users.
+- Pricing based on API calls.
+- Custom enterprise packages for large partners.
+
+This strategy allows FinSight to become more than a personal finance app. It becomes a financial intelligence infrastructure layer that can be embedded into multiple ecosystems. This expansion path helps the product scale faster, reduces dependency on B2C acquisition costs, and creates a more stable revenue stream from business customers.

@@ -39,33 +39,31 @@ const socials = [
 
 export function Footer() {
   return (
-    <footer className="relative border-t border-white/[0.05] bg-[#080d18]">
+    <footer className="relative border-t border-slate-100 bg-white">
       <div className="max-w-7xl mx-auto px-6 py-16">
         {/* Top Row */}
         <div className="grid grid-cols-2 md:grid-cols-6 gap-10 mb-16">
           {/* Brand */}
           <div className="col-span-2">
-            {/* Logo */}
             <Link href="/" className="flex items-center gap-2.5 mb-4 w-fit group">
-              <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-blue-500 to-blue-700 flex items-center justify-center shadow-lg">
-                <Activity className="w-4.5 h-4.5 text-white" strokeWidth={2.5} />
+              <div className="w-9 h-9 rounded-xl bg-gradient-to-br from-[#1C5DFD] to-[#5EA7FD] flex items-center justify-center shadow-[0_4px_12px_rgba(28,93,253,0.3)]">
+                <Activity className="w-5 h-5 text-white" strokeWidth={2.5} />
               </div>
-              <span className="text-white font-bold text-xl tracking-tight">
-                Fin<span className="text-blue-400">Sight</span>
+              <span className="text-[#1A1A2E] font-bold text-xl tracking-tight">
+                Fin<span className="text-[#1C5DFD]">Sight</span>
               </span>
             </Link>
-            <p className="text-sm text-slate-500 leading-relaxed mb-6 max-w-xs">
+            <p className="text-sm text-[#5C6B7A] leading-relaxed mb-6 max-w-xs">
               AI-powered financial health intelligence. Diagnose your finances,
               predict risks, and get a personalized plan — no bank required.
             </p>
-            {/* Social */}
             <div className="flex gap-3">
               {socials.map((social) => (
                 <a
                   key={social.label}
                   href={social.href}
                   aria-label={social.label}
-                  className="w-9 h-9 rounded-lg glass border border-white/[0.06] flex items-center justify-center text-slate-400 hover:text-white hover:border-white/[0.15] transition-all duration-200"
+                  className="w-9 h-9 rounded-xl bg-slate-50 border border-slate-200 flex items-center justify-center text-[#5C6B7A] hover:text-[#1C5DFD] hover:border-[#1C5DFD]/30 hover:bg-[#1C5DFD]/[0.05] transition-all duration-200"
                 >
                   <social.icon className="w-4 h-4" />
                 </a>
@@ -73,10 +71,10 @@ export function Footer() {
             </div>
           </div>
 
-          {/* Link columns */}
+          {/* Link Columns */}
           {Object.entries(footerLinks).map(([category, links]) => (
             <div key={category}>
-              <div className="text-xs font-semibold text-slate-400 uppercase tracking-widest mb-5">
+              <div className="text-xs font-bold text-[#1A1A2E] uppercase tracking-widest mb-5">
                 {category}
               </div>
               <ul className="space-y-3">
@@ -84,7 +82,7 @@ export function Footer() {
                   <li key={link.label}>
                     <Link
                       href={link.href}
-                      className="text-sm text-slate-500 hover:text-slate-200 transition-colors duration-200"
+                      className="text-sm text-[#5C6B7A] hover:text-[#1C5DFD] transition-colors duration-200"
                     >
                       {link.label}
                     </Link>
@@ -98,11 +96,11 @@ export function Footer() {
         {/* Bottom Row */}
         <div className="divider-glow mb-8" />
         <div className="flex flex-col md:flex-row items-center justify-between gap-4">
-          <p className="text-sm text-slate-600">
+          <p className="text-sm text-[#9EAABF]">
             © {new Date().getFullYear()} FinSight. All rights reserved.
           </p>
-          <div className="flex items-center gap-2 text-xs text-slate-700">
-            <div className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse" />
+          <div className="flex items-center gap-2 text-xs text-[#9EAABF]">
+            <div className="w-1.5 h-1.5 rounded-full bg-[#1C5DFD] animate-pulse" />
             <span>Not a bank · Not a lender · Your AI Financial Ally</span>
           </div>
         </div>

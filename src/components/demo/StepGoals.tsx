@@ -10,8 +10,8 @@ export function StepGoals({ formData, updateFormData }: StepProps) {
   return (
     <div className="p-8 md:p-10">
       <div className="mb-8">
-        <h2 className="text-2xl font-bold text-white mb-2">Financial Goals (Optional)</h2>
-        <p className="text-slate-400 text-sm">
+        <h2 className="text-2xl font-bold text-[#1A1A2E] mb-2">Financial Goals (Optional)</h2>
+        <p className="text-[#5C6B7A] text-sm">
           What are you saving for? Our AI can help you reach it faster.
         </p>
       </div>
@@ -41,7 +41,7 @@ export function StepGoals({ formData, updateFormData }: StepProps) {
             <div>
               <label className="input-label" htmlFor="goalAmount">Target Amount</label>
               <div className="relative">
-                <span className="absolute left-4 top-1/2 -translate-y-1/2 text-slate-400 font-medium">$</span>
+                <span className="absolute left-4 top-1/2 -translate-y-1/2 text-[#5C6B7A] font-medium">$</span>
                 <input
                   id="goalAmount"
                   type="number"

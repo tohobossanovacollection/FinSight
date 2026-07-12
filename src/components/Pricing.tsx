@@ -69,21 +69,18 @@ const plans = [
 
 export function Pricing() {
   return (
-    <section id="pricing" className="section-padding relative overflow-hidden">
-      {/* Background */}
-      <div className="orb orb-blue w-[500px] h-[500px] -bottom-32 left-1/2 -translate-x-1/2 opacity-15" />
-      
+    <section id="pricing" className="section-padding relative overflow-hidden bg-[#F2F2F2]">
+      <div className="orb orb-blue w-[400px] h-[400px] -bottom-32 left-1/2 -translate-x-1/2 opacity-20" />
+
       <div className="relative z-10 max-w-7xl mx-auto">
         <AnimatedSection className="text-center mb-16">
-          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full glass border border-white/10 mb-6">
-            <span className="text-sm font-medium text-slate-400">Pricing</span>
-          </div>
-          <h2 className="text-4xl md:text-5xl font-bold text-white tracking-tight mb-5">
+          <div className="badge-brand mb-6 mx-auto w-fit">Pricing</div>
+          <h2 className="text-4xl md:text-5xl font-bold text-[#1A1A2E] tracking-tight mb-5">
             Simple, transparent{" "}
             <span className="gradient-text">pricing</span>
           </h2>
-          <p className="text-lg text-slate-400 max-w-2xl mx-auto">
-            Start free. Upgrade when you need more power. No hidden fees, no upsells, 
+          <p className="text-lg text-[#5C6B7A] max-w-2xl mx-auto">
+            Start free. Upgrade when you need more power. No hidden fees, no upsells,
             no financial products pushed at you.
           </p>
         </AnimatedSection>
@@ -99,19 +96,13 @@ export function Pricing() {
               whileHover={{ y: -6 }}
               className={`relative flex flex-col rounded-3xl border transition-all duration-300 ${
                 plan.highlighted
-                  ? "bg-gradient-to-b from-blue-950/80 to-slate-900/80 border-blue-500/40 shadow-[0_0_60px_rgba(59,130,246,0.2)]"
-                  : "glass-card border-white/[0.06]"
+                  ? "bg-[#1C5DFD] border-[#1C5DFD] shadow-[0_24px_60px_rgba(28,93,253,0.3)]"
+                  : "bg-white border-slate-100 hover:border-[#1C5DFD]/20 hover:shadow-[0_12px_40px_rgba(28,93,253,0.08)]"
               }`}
             >
-              {/* Highlighted border glow */}
-              {plan.highlighted && (
-                <div className="absolute inset-0 rounded-3xl bg-gradient-to-b from-blue-500/10 to-transparent pointer-events-none" />
-              )}
-
-              {/* Badge */}
               {plan.badge && (
                 <div className="absolute -top-4 left-1/2 -translate-x-1/2">
-                  <div className="flex items-center gap-1.5 px-4 py-1.5 rounded-full bg-blue-500 text-white text-xs font-bold shadow-lg shadow-blue-500/40">
+                  <div className="flex items-center gap-1.5 px-4 py-1.5 rounded-full bg-[#1A1A2E] text-white text-xs font-bold shadow-lg">
                     <Star className="w-3 h-3 fill-white" />
                     {plan.badge}
                   </div>
@@ -119,49 +110,40 @@ export function Pricing() {
               )}
 
               <div className="relative p-8 flex flex-col h-full">
-                {/* Plan name */}
                 <div className="flex items-center justify-between mb-6">
-                  <div>
-                    <div className="flex items-center gap-2">
-                      <h3 className="text-xl font-bold text-white">{plan.name}</h3>
-                      {plan.highlighted && <Zap className="w-4 h-4 text-blue-400 fill-blue-400" />}
-                    </div>
+                  <div className="flex items-center gap-2">
+                    <h3 className={`text-xl font-bold ${plan.highlighted ? "text-white" : "text-[#1A1A2E]"}`}>{plan.name}</h3>
+                    {plan.highlighted && <Zap className="w-4 h-4 text-white/80 fill-white/80" />}
                   </div>
                 </div>
 
-                {/* Price */}
                 <div className="flex items-baseline gap-1 mb-3">
-                  <span className="text-5xl font-bold text-white">{plan.price}</span>
-                  <span className="text-slate-400 text-sm font-medium">{plan.period}</span>
+                  <span className={`text-5xl font-bold ${plan.highlighted ? "text-white" : "text-[#1A1A2E]"}`}>{plan.price}</span>
+                  <span className={`text-sm font-medium ${plan.highlighted ? "text-white/70" : "text-[#9EAABF]"}`}>{plan.period}</span>
                 </div>
-                <p className="text-sm text-slate-400 leading-relaxed mb-8">{plan.description}</p>
+                <p className={`text-sm leading-relaxed mb-8 ${plan.highlighted ? "text-white/80" : "text-[#5C6B7A]"}`}>{plan.description}</p>
 
-                {/* CTA */}
                 <Link
                   href={plan.href}
-                  className={`flex items-center justify-center gap-2 py-3.5 px-6 rounded-xl font-semibold text-sm transition-all duration-200 mb-8 ${
+                  className={`flex items-center justify-center gap-2 py-3.5 px-6 rounded-full font-semibold text-sm transition-all duration-200 mb-8 ${
                     plan.highlighted
-                      ? "bg-blue-500 hover:bg-blue-400 text-white shadow-lg shadow-blue-500/30"
-                      : "btn-secondary"
+                      ? "bg-white text-[#1C5DFD] hover:bg-white/90 shadow-lg"
+                      : "btn-primary"
                   }`}
                 >
                   {plan.cta}
                   <ArrowRight className="w-4 h-4" />
                 </Link>
 
-                {/* Divider */}
-                <div className="divider-glow mb-6" />
+                <div className={`h-px mb-6 ${plan.highlighted ? "bg-white/20" : "bg-slate-100"}`} />
 
-                {/* Features */}
                 <ul className="space-y-3 flex-1">
                   {plan.features.map((feature) => (
                     <li key={feature} className="flex items-start gap-3">
-                      <div className={`w-5 h-5 rounded-full flex items-center justify-center shrink-0 mt-0.5 ${
-                        plan.highlighted ? "bg-blue-500/20" : "bg-white/[0.06]"
-                      }`}>
-                        <Check className={`w-3 h-3 ${plan.highlighted ? "text-blue-400" : "text-emerald-400"}`} />
+                      <div className={`w-5 h-5 rounded-full flex items-center justify-center shrink-0 mt-0.5 ${plan.highlighted ? "bg-white/20" : "bg-[#1C5DFD]/[0.08]"}`}>
+                        <Check className={`w-3 h-3 ${plan.highlighted ? "text-white" : "text-[#1C5DFD]"}`} />
                       </div>
-                      <span className="text-sm text-slate-300">{feature}</span>
+                      <span className={`text-sm ${plan.highlighted ? "text-white/90" : "text-[#5C6B7A]"}`}>{feature}</span>
                     </li>
                   ))}
                 </ul>
@@ -170,9 +152,8 @@ export function Pricing() {
           ))}
         </div>
 
-        {/* Footer note */}
         <AnimatedSection className="text-center mt-10" delay={0.3}>
-          <p className="text-sm text-slate-600">
+          <p className="text-sm text-[#9EAABF]">
             All plans include 14-day free trial of Plus. No credit card required to start.
           </p>
         </AnimatedSection>

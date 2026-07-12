@@ -43,7 +43,7 @@ export function Navbar() {
       <motion.nav
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
           isScrolled
-            ? "glass border-b border-white/[0.06] py-3"
+            ? "bg-white/90 backdrop-blur-xl border-b border-[#1C5DFD]/[0.08] py-3 shadow-[0_2px_16px_rgba(28,93,253,0.07)]"
             : "bg-transparent py-5"
         }`}
         initial={{ y: -80, opacity: 0 }}
@@ -52,22 +52,22 @@ export function Navbar() {
       >
         <div className="w-full px-6 md:px-12 flex items-center justify-between relative">
           {/* Logo */}
-          <Link href="/" onClick={handleLogoClick} className="flex items-center gap-2.5 group">
-            <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-blue-500 to-blue-700 flex items-center justify-center shadow-lg shadow-blue-500/30 group-hover:shadow-blue-500/50 transition-all duration-300">
-              <Activity className="w-4.5 h-4.5 text-white" strokeWidth={2.5} />
+          <Link href="/" onClick={handleLogoClick} className="flex items-center gap-2.5 group shrink-0">
+            <div className="w-9 h-9 rounded-xl bg-gradient-to-br from-[#1C5DFD] to-[#5EA7FD] flex items-center justify-center shadow-[0_4px_12px_rgba(28,93,253,0.35)] group-hover:shadow-[0_6px_18px_rgba(28,93,253,0.5)] transition-all duration-300">
+              <Activity className="w-5 h-5 text-white" strokeWidth={2.5} />
             </div>
-            <span className="text-white font-bold text-xl tracking-tight">
-              Fin<span className="text-blue-400">Sight</span>
+            <span className="text-[#1A1A2E] font-bold text-xl tracking-tight">
+              Fin<span className="text-[#1C5DFD]">Sight</span>
             </span>
           </Link>
 
-          {/* Desktop Links */}
+          {/* Desktop Links — absolutely centered */}
           <div className="hidden md:flex items-center gap-1 absolute left-1/2 -translate-x-1/2">
             {navLinks.map((link) => (
               <a
                 key={link.label}
                 href={link.href}
-                className="px-4 py-2 text-sm font-medium text-slate-300 hover:text-white rounded-lg hover:bg-white/[0.06] transition-all duration-200"
+                className="px-4 py-2 text-sm font-medium text-[#5C6B7A] hover:text-[#1C5DFD] rounded-full hover:bg-[#1C5DFD]/[0.06] transition-all duration-200"
               >
                 {link.label}
               </a>
@@ -75,18 +75,15 @@ export function Navbar() {
           </div>
 
           {/* CTA Buttons */}
-          <div className="hidden md:flex items-center gap-3">
+          <div className="hidden md:flex items-center gap-3 shrink-0">
             <Link
               href="/demo"
-              className="px-4 py-2 text-sm font-semibold text-blue-400 hover:text-blue-300 transition-colors duration-200"
+              className="px-5 py-2 text-sm font-semibold text-[#1C5DFD] hover:bg-[#1C5DFD]/[0.07] rounded-full transition-all duration-200"
             >
               Try Demo
             </Link>
             <motion.div whileHover={{ scale: 1.03 }} whileTap={{ scale: 0.97 }}>
-              <Link
-                href="/app"
-                className="btn-primary text-sm px-5 py-2.5"
-              >
+              <Link href="/app" className="btn-primary text-sm px-5 py-2.5">
                 <span>Get Started</span>
               </Link>
             </motion.div>
@@ -94,7 +91,7 @@ export function Navbar() {
 
           {/* Mobile Hamburger */}
           <button
-            className="md:hidden p-2 rounded-lg text-slate-300 hover:text-white hover:bg-white/[0.06] transition-all"
+            className="md:hidden p-2 rounded-xl text-[#5C6B7A] hover:text-[#1C5DFD] hover:bg-[#1C5DFD]/[0.06] transition-all"
             onClick={() => setMobileOpen(!mobileOpen)}
             aria-label="Toggle menu"
           >
@@ -111,11 +108,11 @@ export function Navbar() {
         transition={{ duration: 0.3 }}
       >
         <div
-          className="absolute inset-0 bg-black/60 backdrop-blur-sm"
+          className="absolute inset-0 bg-[#1A1A2E]/30 backdrop-blur-sm"
           onClick={() => setMobileOpen(false)}
         />
         <motion.div
-          className="absolute top-0 right-0 h-full w-72 glass-strong border-l border-white/[0.08] p-6 pt-20 flex flex-col gap-2"
+          className="absolute top-0 right-0 h-full w-72 bg-white border-l border-slate-100 p-6 pt-20 flex flex-col gap-2 shadow-2xl"
           initial={{ x: "100%" }}
           animate={mobileOpen ? { x: 0 } : { x: "100%" }}
           transition={{ duration: 0.35, ease: "easeOut" }}
@@ -124,7 +121,7 @@ export function Navbar() {
             <a
               key={link.label}
               href={link.href}
-              className="px-4 py-3 text-base font-medium text-slate-300 hover:text-white rounded-xl hover:bg-white/[0.06] transition-all"
+              className="px-4 py-3 text-base font-medium text-[#5C6B7A] hover:text-[#1C5DFD] rounded-xl hover:bg-[#1C5DFD]/[0.06] transition-all"
               onClick={() => setMobileOpen(false)}
             >
               {link.label}
