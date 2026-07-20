@@ -30,7 +30,7 @@ export function DemoResults({ formData }: DemoResultsProps) {
 
   if (loading) {
     return (
-      <div className="min-h-screen bg-gradient-hero flex flex-col items-center justify-center relative overflow-hidden">
+      <div key="analysis-loading" className="min-h-screen bg-gradient-hero flex flex-col items-center justify-center relative overflow-hidden">
         <div className="orb orb-blue w-[400px] h-[400px] top-0 left-0 opacity-30" />
         <div className="orb orb-tint w-[300px] h-[300px] bottom-0 right-0 opacity-40" />
         <div className="relative z-10 flex flex-col items-center">
@@ -60,12 +60,16 @@ export function DemoResults({ formData }: DemoResultsProps) {
   const strokeColor = score >= 70 ? "#10B981" : score >= 50 ? "#F59E0B" : "#EF4444";
 
   return (
-    <div className="min-h-screen bg-gradient-hero pt-24 pb-20 px-6 relative overflow-hidden">
+    <div key="analysis-results" className="min-h-screen bg-gradient-hero pt-24 pb-20 px-6 relative overflow-hidden">
       <div className="orb orb-tint w-[500px] h-[500px] top-0 right-0 opacity-40" />
       <div className="orb orb-blue w-[400px] h-[400px] bottom-0 left-0 opacity-20" />
 
       <div className="max-w-4xl mx-auto relative z-10">
-        <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} className="text-center mb-12">
+        <motion.div
+          initial={{ opacity: 0, y: 20, rotate: 0, scale: 1 }}
+          animate={{ opacity: 1, y: 0, rotate: 0, scale: 1 }}
+          className="text-center mb-12"
+        >
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-emerald-50 border border-emerald-200 text-emerald-600 mb-6">
             <BrainCircuit className="w-4 h-4" />
             <span className="text-sm font-semibold">AI Analysis Complete</span>
@@ -166,7 +170,7 @@ export function DemoResults({ formData }: DemoResultsProps) {
 
         {/* CTA */}
         <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.4 }} className="text-center">
-          <Link href="/app" className="btn-primary text-base px-10 py-4 inline-flex items-center gap-2 mb-4">
+          <Link href="/#pricing" className="btn-primary text-base px-10 py-4 inline-flex items-center gap-2 mb-4">
             <span>Get Your Full FinSight Plan</span>
             <ArrowRight className="w-5 h-5" />
           </Link>

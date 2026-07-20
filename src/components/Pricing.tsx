@@ -25,7 +25,7 @@ const plans = [
   },
   {
     name: "Plus",
-    price: "$9",
+    price: "$4",
     period: "/month",
     description: "The complete FinSight experience for individuals serious about financial growth.",
     cta: "Start with Plus",

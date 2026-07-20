@@ -1,0 +1,166 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">How to use FinSight</title>
+  <desc id="desc">A seven-step process from opening the demo and entering financial data to viewing the analysis.</desc>
+
+  <defs>
+    <linearGradient id="pageBg" x1="0" y1="0" x2="1600" y2="900" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#F8FBFF"/>
+      <stop offset="1" stop-color="#EEF5FF"/>
+    </linearGradient>
+    <linearGradient id="brand" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#1C5DFD"/>
+      <stop offset="1" stop-color="#5EA7FD"/>
+    </linearGradient>
+    <linearGradient id="resultBg" x1="270" y1="530" x2="570" y2="730" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#1C5DFD"/>
+      <stop offset="1" stop-color="#367EF7"/>
+    </linearGradient>
+    <filter id="cardShadow" x="-20%" y="-20%" width="140%" height="160%" color-interpolation-filters="sRGB">
+      <feDropShadow dx="0" dy="10" stdDeviation="13" flood-color="#143B7A" flood-opacity="0.10"/>
+    </filter>
+    <filter id="logoShadow" x="-30%" y="-30%" width="160%" height="180%" color-interpolation-filters="sRGB">
+      <feDropShadow dx="0" dy="8" stdDeviation="9" flood-color="#1C5DFD" flood-opacity="0.25"/>
+    </filter>
+    <marker id="arrow" viewBox="0 0 12 12" refX="10" refY="6" markerWidth="12" markerHeight="12" orient="auto-start-reverse">
+      <path d="M1 1L10 6L1 11" fill="none" stroke="#1C5DFD" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+    </marker>
+  </defs>
+
+  <rect width="1600" height="900" fill="url(#pageBg)"/>
+  <circle cx="1510" cy="-15" r="260" fill="#C9E2FB" opacity="0.34"/>
+  <circle cx="45" cy="850" r="240" fill="#DCEBFF" opacity="0.55"/>
+  <path d="M0 168H1600" stroke="#DDE9F8" stroke-width="2"/>
+
+  <!-- Header and FinSight mark -->
+  <g filter="url(#logoShadow)">
+    <rect x="74" y="48" width="92" height="92" rx="26" fill="url(#brand)"/>
+    <svg x="94" y="68" width="52" height="52" viewBox="0 0 24 24" fill="none">
+      <path d="M22 12h-2.48a2 2 0 0 0-1.93 1.46l-2.35 8.36a.25.25 0 0 1-.48 0L9.24 2.18a.25.25 0 0 0-.48 0l-2.35 8.36A2 2 0 0 1 4.49 12H2" stroke="#FFFFFF" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+  </g>
+  <text x="196" y="85" fill="#1A1A2E" font-family="Arial, Helvetica, sans-serif" font-size="34" font-weight="700">HOW TO USE FINSIGHT</text>
+  <text x="196" y="124" fill="#5C6B7A" font-family="Inter, Arial, sans-serif" font-size="20">From personal financial data to an action plan in 7 steps</text>
+
+  <!-- Connectors: top row -->
+  <path d="M390 310H447" fill="none" stroke="#1C5DFD" stroke-width="4" stroke-linecap="round" marker-end="url(#arrow)"/>
+  <path d="M780 310H837" fill="none" stroke="#1C5DFD" stroke-width="4" stroke-linecap="round" marker-end="url(#arrow)"/>
+  <path d="M1170 310H1227" fill="none" stroke="#1C5DFD" stroke-width="4" stroke-linecap="round" marker-end="url(#arrow)"/>
+  <path d="M1400 410V500" fill="none" stroke="#1C5DFD" stroke-width="4" stroke-linecap="round" marker-end="url(#arrow)"/>
+  <!-- Connectors: return row -->
+  <path d="M1250 630H1083" fill="none" stroke="#1C5DFD" stroke-width="4" stroke-linecap="round" marker-end="url(#arrow)"/>
+  <path d="M760 630H593" fill="none" stroke="#1C5DFD" stroke-width="4" stroke-linecap="round" marker-end="url(#arrow)"/>
+
+  <!-- Step 1 -->
+  <g filter="url(#cardShadow)">
+    <rect x="80" y="210" width="310" height="200" rx="26" fill="#FFFFFF" stroke="#DCE8F7" stroke-width="2"/>
+  </g>
+  <circle cx="126" cy="256" r="24" fill="#E9F1FF"/>
+  <text x="126" y="264" text-anchor="middle" fill="#1C5DFD" font-family="Inter, Arial, sans-serif" font-size="22" font-weight="800">1</text>
+  <rect x="302" y="237" width="56" height="38" rx="12" fill="#1C5DFD" opacity="0.09"/>
+  <path d="M318 247H343M318 255H343M318 263H333" stroke="#1C5DFD" stroke-width="3" stroke-linecap="round"/>
+  <text x="110" y="315" fill="#1A1A2E" font-family="Inter, Arial, sans-serif" font-size="24" font-weight="750">Open the demo</text>
+  <text x="110" y="350" fill="#5C6B7A" font-family="Inter, Arial, sans-serif" font-size="17">
+    <tspan x="110" dy="0">On the home page, select</tspan>
+    <tspan x="110" dy="25" fill="#1C5DFD" font-weight="700">“Try Demo”.</tspan>
+  </text>
+
+  <!-- Step 2 -->
+  <g filter="url(#cardShadow)">
+    <rect x="470" y="210" width="310" height="200" rx="26" fill="#FFFFFF" stroke="#DCE8F7" stroke-width="2"/>
+  </g>
+  <circle cx="516" cy="256" r="24" fill="#E9F1FF"/>
+  <text x="516" y="264" text-anchor="middle" fill="#1C5DFD" font-family="Inter, Arial, sans-serif" font-size="22" font-weight="800">2</text>
+  <circle cx="694" cy="251" r="13" fill="none" stroke="#1C5DFD" stroke-width="3"/>
+  <path d="M671 276C676 261 712 261 717 276" fill="none" stroke="#1C5DFD" stroke-width="3" stroke-linecap="round"/>
+  <text x="500" y="315" fill="#1A1A2E" font-family="Inter, Arial, sans-serif" font-size="24" font-weight="750">Enter your profile</text>
+  <text x="500" y="350" fill="#5C6B7A" font-family="Inter, Arial, sans-serif" font-size="17">
+    <tspan x="500" dy="0">Enter your age, city,</tspan>
+    <tspan x="500" dy="25">and country.</tspan>
+  </text>
+
+  <!-- Step 3 -->
+  <g filter="url(#cardShadow)">
+    <rect x="860" y="210" width="310" height="200" rx="26" fill="#FFFFFF" stroke="#DCE8F7" stroke-width="2"/>
+  </g>
+  <circle cx="906" cy="256" r="24" fill="#E9F1FF"/>
+  <text x="906" y="264" text-anchor="middle" fill="#1C5DFD" font-family="Inter, Arial, sans-serif" font-size="22" font-weight="800">3</text>
+  <circle cx="1084" cy="256" r="24" fill="#E8F8F2"/>
+  <text x="1084" y="265" text-anchor="middle" fill="#10B981" font-family="Arial, sans-serif" font-size="26" font-weight="800">$</text>
+  <text x="890" y="315" fill="#1A1A2E" font-family="Inter, Arial, sans-serif" font-size="24" font-weight="750">Add your income</text>
+  <text x="890" y="350" fill="#5C6B7A" font-family="Inter, Arial, sans-serif" font-size="17">
+    <tspan x="890" dy="0">Salary, freelance work,</tspan>
+    <tspan x="890" dy="25">and other income sources.</tspan>
+  </text>
+
+  <!-- Step 4 -->
+  <g filter="url(#cardShadow)">
+    <rect x="1250" y="210" width="300" height="200" rx="26" fill="#FFFFFF" stroke="#DCE8F7" stroke-width="2"/>
+  </g>
+  <circle cx="1296" cy="256" r="24" fill="#E9F1FF"/>
+  <text x="1296" y="264" text-anchor="middle" fill="#1C5DFD" font-family="Inter, Arial, sans-serif" font-size="22" font-weight="800">4</text>
+  <rect x="1460" y="236" width="52" height="42" rx="9" fill="#FFF5E6"/>
+  <path d="M1472 248H1500M1472 257H1493M1472 266H1498" stroke="#F59E0B" stroke-width="3" stroke-linecap="round"/>
+  <text x="1280" y="315" fill="#1A1A2E" font-family="Inter, Arial, sans-serif" font-size="24" font-weight="750">Add your expenses</text>
+  <text x="1280" y="350" fill="#5C6B7A" font-family="Inter, Arial, sans-serif" font-size="17">
+    <tspan x="1280" dy="0">Enter your average</tspan>
+    <tspan x="1280" dy="25">monthly expenses.</tspan>
+  </text>
+
+  <!-- Step 5 -->
+  <g filter="url(#cardShadow)">
+    <rect x="1250" y="530" width="300" height="200" rx="26" fill="#FFFFFF" stroke="#DCE8F7" stroke-width="2"/>
+  </g>
+  <circle cx="1296" cy="576" r="24" fill="#E9F1FF"/>
+  <text x="1296" y="584" text-anchor="middle" fill="#1C5DFD" font-family="Inter, Arial, sans-serif" font-size="22" font-weight="800">5</text>
+  <rect x="1456" y="554" width="56" height="42" rx="10" fill="#FDECEC"/>
+  <path d="M1468 567H1500M1475 578H1493" stroke="#EF4444" stroke-width="3" stroke-linecap="round"/>
+  <text x="1280" y="635" fill="#1A1A2E" font-family="Inter, Arial, sans-serif" font-size="24" font-weight="750">Add debts &amp; credit</text>
+  <text x="1280" y="670" fill="#5C6B7A" font-family="Inter, Arial, sans-serif" font-size="17">
+    <tspan x="1280" dy="0">Loans, credit cards, and</tspan>
+    <tspan x="1280" dy="25">monthly payments.</tspan>
+  </text>
+
+  <!-- Step 6 -->
+  <g filter="url(#cardShadow)">
+    <rect x="760" y="530" width="300" height="200" rx="26" fill="#FFFFFF" stroke="#DCE8F7" stroke-width="2"/>
+  </g>
+  <circle cx="806" cy="576" r="24" fill="#E9F1FF"/>
+  <text x="806" y="584" text-anchor="middle" fill="#1C5DFD" font-family="Inter, Arial, sans-serif" font-size="22" font-weight="800">6</text>
+  <circle cx="972" cy="574" r="22" fill="none" stroke="#7C3AED" stroke-width="3"/>
+  <circle cx="972" cy="574" r="11" fill="none" stroke="#7C3AED" stroke-width="3"/>
+  <path d="M972 574L994 552" stroke="#7C3AED" stroke-width="3" stroke-linecap="round"/>
+  <text x="790" y="635" fill="#1A1A2E" font-family="Inter, Arial, sans-serif" font-size="24" font-weight="750">Set a goal</text>
+  <text x="790" y="670" fill="#5C6B7A" font-family="Inter, Arial, sans-serif" font-size="17">
+    <tspan x="790" dy="0">Choose a target amount</tspan>
+    <tspan x="790" dy="25">and timeline (optional).</tspan>
+  </text>
+
+  <!-- Step 7 / Result -->
+  <g filter="url(#cardShadow)">
+    <rect x="270" y="530" width="300" height="200" rx="26" fill="url(#resultBg)"/>
+  </g>
+  <circle cx="316" cy="576" r="24" fill="#FFFFFF" opacity="0.2"/>
+  <text x="316" y="584" text-anchor="middle" fill="#FFFFFF" font-family="Inter, Arial, sans-serif" font-size="22" font-weight="800">7</text>
+  <path d="M482 590V572M502 590V558M522 590V542" stroke="#FFFFFF" stroke-width="6" stroke-linecap="round" opacity="0.92"/>
+  <text x="300" y="635" fill="#FFFFFF" font-family="Inter, Arial, sans-serif" font-size="24" font-weight="750">View your analysis</text>
+  <text x="300" y="670" fill="#EAF2FF" font-family="Inter, Arial, sans-serif" font-size="17">
+    <tspan x="300" dy="0">Health Score, cash flow,</tspan>
+    <tspan x="300" dy="25">and top recommendations.</tspan>
+  </text>
+
+  <!-- Footer note -->
+  <!-- <rect x="270" y="790" width="1060" height="62" rx="20" fill="#FFFFFF" stroke="#DCE8F7" stroke-width="2"/>
+  <circle cx="310" cy="821" r="17" fill="#E9F1FF"/>
+  <text x="310" y="828" text-anchor="middle" fill="#1C5DFD" font-family="Georgia, serif" font-size="22" font-weight="700">i</text>
+  <text x="342" y="828" fill="#5C6B7A" font-family="Inter, Arial, sans-serif" font-size="17">
+    <tspan font-weight="750" fill="#1A1A2E">Note:</tspan>
+    The analysis process takes approximately 1–2 minutes to complete.
+  </text>  -->
+  <rect x="425" y="790" width="750" height="62" rx="20" fill="#FFFFFF" stroke="#DCE8F7" stroke-width="2"/>
+<circle cx="466" cy="821" r="17" fill="#E9F1FF"/>
+<text x="466" y="828" text-anchor="middle" fill="#1C5DFD" font-family="Georgia, serif" font-size="22" font-weight="700">i</text>
+<text x="499" y="828" fill="#5C6B7A" font-family="Inter, Arial, sans-serif" font-size="17">
+  <tspan font-weight="750" fill="#1A1A2E">Note:</tspan>
+  The analysis process takes approximately 1–2 minutes to complete.
+</text>
+</svg>
