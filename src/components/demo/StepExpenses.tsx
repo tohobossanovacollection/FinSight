@@ -1,5 +1,6 @@
 "use client";
 import { FormData } from "@/app/demo/page";
+import { CurrencyInput } from "@/components/demo/CurrencyInput";
 
 interface StepProps {
   formData: FormData;
@@ -34,15 +35,10 @@ export function StepExpenses({ formData, updateFormData }: StepProps) {
           <div key={field.id}>
             <label className="input-label" htmlFor={field.id}>{field.label}</label>
             <div className="relative">
-              <span className="absolute left-4 top-1/2 -translate-y-1/2 text-[#5C6B7A] font-medium">$</span>
-              <input
+              <CurrencyInput
                 id={field.id}
-                type="number"
-                min="0"
-                className="input-field pl-8"
-                placeholder="0"
                 value={formData[field.key] as string}
-                onChange={(e) => updateFormData({ [field.key]: e.target.value })}
+                onValueChange={(value) => updateFormData({ [field.key]: value })}
               />
             </div>
           </div>

@@ -1,5 +1,6 @@
 "use client";
 import { FormData } from "@/app/demo/page";
+import { CurrencyInput } from "@/components/demo/CurrencyInput";
 
 interface StepProps {
   formData: FormData;
@@ -20,15 +21,10 @@ export function StepIncome({ formData, updateFormData }: StepProps) {
         <div>
           <label className="input-label" htmlFor="salaryIncome">Salary / Primary Job</label>
           <div className="relative">
-            <span className="absolute left-4 top-1/2 -translate-y-1/2 text-[#5C6B7A] font-medium">$</span>
-            <input
+            <CurrencyInput
               id="salaryIncome"
-              type="number"
-              min="0"
-              className="input-field pl-8"
-              placeholder="0"
               value={formData.salaryIncome}
-              onChange={(e) => updateFormData({ salaryIncome: e.target.value })}
+              onValueChange={(value) => updateFormData({ salaryIncome: value })}
             />
           </div>
         </div>
@@ -36,15 +32,10 @@ export function StepIncome({ formData, updateFormData }: StepProps) {
         <div>
           <label className="input-label" htmlFor="freelanceIncome">Freelance / Side Hustle (Average)</label>
           <div className="relative">
-            <span className="absolute left-4 top-1/2 -translate-y-1/2 text-[#5C6B7A] font-medium">$</span>
-            <input
+            <CurrencyInput
               id="freelanceIncome"
-              type="number"
-              min="0"
-              className="input-field pl-8"
-              placeholder="0"
               value={formData.freelanceIncome}
-              onChange={(e) => updateFormData({ freelanceIncome: e.target.value })}
+              onValueChange={(value) => updateFormData({ freelanceIncome: value })}
             />
           </div>
         </div>
@@ -52,15 +43,10 @@ export function StepIncome({ formData, updateFormData }: StepProps) {
         <div>
           <label className="input-label" htmlFor="otherIncome">Other Income (Investments, Rental, etc.)</label>
           <div className="relative">
-            <span className="absolute left-4 top-1/2 -translate-y-1/2 text-[#5C6B7A] font-medium">$</span>
-            <input
+            <CurrencyInput
               id="otherIncome"
-              type="number"
-              min="0"
-              className="input-field pl-8"
-              placeholder="0"
               value={formData.otherIncome}
-              onChange={(e) => updateFormData({ otherIncome: e.target.value })}
+              onValueChange={(value) => updateFormData({ otherIncome: value })}
             />
           </div>
         </div>

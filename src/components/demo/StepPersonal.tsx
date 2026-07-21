@@ -1,5 +1,6 @@
 "use client";
 import { FormData } from "@/app/demo/page";
+import { COUNTRIES } from "@/components/demo/countries";
 
 interface StepProps {
   formData: FormData;
@@ -10,7 +11,7 @@ export function StepPersonal({ formData, updateFormData }: StepProps) {
   return (
     <div className="p-8 md:p-10">
       <div className="mb-8">
-        <h2 className="text-2xl font-bold text-[#1A1A2E] mb-2">Let's get to know you</h2>
+        <h2 className="text-2xl font-bold text-[#1A1A2E] mb-2">Let&apos;s get to know you</h2>
         <p className="text-[#5C6B7A] text-sm">
           This helps our AI personalize your financial insights and benchmarks.
         </p>
@@ -27,7 +28,19 @@ export function StepPersonal({ formData, updateFormData }: StepProps) {
           </div>
           <div>
             <label className="input-label" htmlFor="country">Country</label>
-            <input id="country" type="text" className="input-field" placeholder="e.g. USA" value={formData.country} onChange={(e) => updateFormData({ country: e.target.value })} />
+            <select
+              id="country"
+              className="input-field"
+              value={formData.country}
+              onChange={(e) => updateFormData({ country: e.target.value })}
+            >
+              <option value="">Select a country...</option>
+              {COUNTRIES.map((country) => (
+                <option key={country.code} value={country.name}>
+                  {country.name}
+                </option>
+              ))}
+            </select>
           </div>
         </div>
       </div>

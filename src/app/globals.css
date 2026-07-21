@@ -299,6 +299,10 @@ body {
   color: #9EAABF;
 }
 
+.currency-input:focus::placeholder {
+  color: transparent;
+}
+
 select.input-field option {
   background-color: #FFFFFF;
   color: #1A1A2E;

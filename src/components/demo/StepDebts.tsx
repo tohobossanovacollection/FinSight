@@ -1,5 +1,6 @@
 "use client";
 import { FormData } from "@/app/demo/page";
+import { CurrencyInput } from "@/components/demo/CurrencyInput";
 import { Plus, Trash2 } from "lucide-react";
 
 interface StepProps {
@@ -84,15 +85,13 @@ export function StepDebts({ formData, updateFormData }: StepProps) {
                   <div>
                     <label className="input-label">Total Balance</label>
                     <div className="relative">
-                      <span className="absolute left-3 top-1/2 -translate-y-1/2 text-[#5C6B7A] text-sm">$</span>
-                      <input type="number" className="input-field py-2 pl-6 text-sm" value={loan.balance} onChange={e => updateLoan(idx, 'balance', e.target.value)} />
+                      <CurrencyInput className="py-2 text-sm" value={loan.balance} onValueChange={(value) => updateLoan(idx, "balance", value)} />
                     </div>
                   </div>
                   <div>
                     <label className="input-label">Monthly Payment</label>
                     <div className="relative">
-                      <span className="absolute left-3 top-1/2 -translate-y-1/2 text-[#5C6B7A] text-sm">$</span>
-                      <input type="number" className="input-field py-2 pl-6 text-sm" value={loan.monthlyPayment} onChange={e => updateLoan(idx, 'monthlyPayment', e.target.value)} />
+                      <CurrencyInput className="py-2 text-sm" value={loan.monthlyPayment} onValueChange={(value) => updateLoan(idx, "monthlyPayment", value)} />
                     </div>
                   </div>
                 </div>
@@ -132,15 +131,13 @@ export function StepDebts({ formData, updateFormData }: StepProps) {
                   <div>
                     <label className="input-label">Current Balance</label>
                     <div className="relative">
-                      <span className="absolute left-3 top-1/2 -translate-y-1/2 text-[#5C6B7A] text-sm">$</span>
-                      <input type="number" className="input-field py-2 pl-6 text-sm" value={card.balance} onChange={e => updateCreditCard(idx, 'balance', e.target.value)} />
+                      <CurrencyInput className="py-2 text-sm" value={card.balance} onValueChange={(value) => updateCreditCard(idx, "balance", value)} />
                     </div>
                   </div>
                   <div>
                     <label className="input-label">Credit Limit</label>
                     <div className="relative">
-                      <span className="absolute left-3 top-1/2 -translate-y-1/2 text-[#5C6B7A] text-sm">$</span>
-                      <input type="number" className="input-field py-2 pl-6 text-sm" value={card.limit} onChange={e => updateCreditCard(idx, 'limit', e.target.value)} />
+                      <CurrencyInput className="py-2 text-sm" value={card.limit} onValueChange={(value) => updateCreditCard(idx, "limit", value)} />
                     </div>
                   </div>
                 </div>
