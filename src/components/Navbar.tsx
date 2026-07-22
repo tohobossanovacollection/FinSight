@@ -76,14 +76,8 @@ export function Navbar() {
 
           {/* CTA Buttons */}
           <div className="hidden md:flex items-center gap-3 shrink-0">
-            <Link
-              href="/demo"
-              className="px-5 py-2 text-sm font-semibold text-[#1C5DFD] hover:bg-[#1C5DFD]/[0.07] rounded-full transition-all duration-200"
-            >
-              Try Demo
-            </Link>
             <motion.div whileHover={{ scale: 1.03 }} whileTap={{ scale: 0.97 }}>
-              <Link href="/app" className="btn-primary text-sm px-5 py-2.5">
+              <Link href="/demo" className="btn-primary text-sm px-5 py-2.5">
                 <span>Get Started</span>
               </Link>
             </motion.div>
@@ -130,13 +124,6 @@ export function Navbar() {
           <div className="mt-6 flex flex-col gap-3">
             <Link
               href="/demo"
-              className="btn-secondary text-center justify-center"
-              onClick={() => setMobileOpen(false)}
-            >
-              Try Demo
-            </Link>
-            <Link
-              href="/app"
               className="btn-primary text-center justify-center"
               onClick={() => setMobileOpen(false)}
             >
