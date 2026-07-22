@@ -156,7 +156,7 @@ export function Hero() {
           transition={{ duration: 0.6, delay: 0.3 }}
         >
           <motion.div whileHover={{ scale: 1.04 }} whileTap={{ scale: 0.97 }}>
-            <Link href="/app" className="btn-primary text-base px-8 py-3.5">
+            <Link href="/demo" className="btn-primary text-base px-8 py-3.5">
               <span>Get Started Free</span>
               <ArrowRight className="w-4 h-4" />
             </Link>
